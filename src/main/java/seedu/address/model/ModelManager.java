@@ -13,6 +13,7 @@ import seedu.address.commons.core.GuiSettings;
 import seedu.address.commons.core.LogsCenter;
 import seedu.address.model.person.Person;
 import seedu.address.model.task.Task;
+import seedu.address.model.task.TaskContainsKeywordsPredicate;
 
 /**
  * Represents the in-memory model of the address book data.
@@ -161,4 +162,8 @@ public class ModelManager implements Model {
         return filteredTasks;
     }
 
+    @Override
+    public void updateFilteredTaskList(TaskContainsKeywordsPredicate predicate) {
+        // TODO: add method body
+    }
 }

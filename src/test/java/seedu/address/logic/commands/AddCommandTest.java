@@ -22,6 +22,7 @@ import seedu.address.model.ReadOnlyAddressBook;
 import seedu.address.model.ReadOnlyUserPrefs;
 import seedu.address.model.person.Person;
 import seedu.address.model.task.Task;
+import seedu.address.model.task.TaskContainsKeywordsPredicate;
 import seedu.address.testutil.PersonBuilder;
 
 public class AddCommandTest {
@@ -79,6 +80,11 @@ public class AddCommandTest {
      * A default model stub that have all of the methods failing.
      */
     private class ModelStub implements Model {
+        @Override
+        public void updateFilteredTaskList(TaskContainsKeywordsPredicate predicate) {
+            // TODO: add method body
+        }
+
         @Override
         public void setUserPrefs(ReadOnlyUserPrefs userPrefs) {
             throw new AssertionError("This method should not be called.");
@@ -196,5 +202,6 @@ public class AddCommandTest {
             return new AddressBook();
         }
     }
+
 
 }

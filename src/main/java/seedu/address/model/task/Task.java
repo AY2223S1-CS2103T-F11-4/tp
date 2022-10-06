@@ -37,4 +37,9 @@ public class Task {
     public void unmarkTask() {
         isDone = false;
     }
+
+    // TODO: Implement method
+    public Description getDescription() {
+        return new Description();
+    }
 }
