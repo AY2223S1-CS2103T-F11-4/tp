@@ -163,7 +163,8 @@ public class ModelManager implements Model {
     }
 
     @Override
-    public void updateFilteredTaskList(TaskContainsKeywordsPredicate predicate) {
-        // TODO: add method body
+    public void updateFilteredTaskList(Predicate<Task> predicate) {
+        requireNonNull(predicate);
+        filteredTasks.setPredicate(predicate);
     }
 }
